@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- bean definitions here -->
+   
+    
+<bean id="empid" class="com.constructormode.Employee" autowire="constructor">
+
+<constructor-arg name="eid" value="20282"></constructor-arg>
+<constructor-arg name="ename" value ="pooja"></constructor-arg>
+<constructor-arg> <ref bean="dept1"/> </constructor-arg>
+</bean>
+
+<bean id="dept1" class="com.constructormode.Department">
+<constructor-arg name="did" value="101"></constructor-arg>
+<constructor-arg name="dname" value ="Java/Salpoint" ></constructor-arg>
+</bean>
+</beans>
+ 
